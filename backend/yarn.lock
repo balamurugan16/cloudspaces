@@ -101,6 +101,19 @@
     "@azure/core-rest-pipeline" "^1.8.0"
     tslib "^2.2.0"
 
+"@azure/arm-storage@^17.2.1":
+  version "17.2.1"
+  resolved "https://registry.yarnpkg.com/@azure/arm-storage/-/arm-storage-17.2.1.tgz#56e8f09e011abbfe5be5f7eae4710474fcdaa096"
+  integrity sha512-J2jmTPv8ZraSHDTz9l2Bx8gNL3ktfDDWo2mxWfzarn64O9Fjhb+l85YWyubGy2xUdeGuZPKzvQLltGv8bSu8eQ==
+  dependencies:
+    "@azure/abort-controller" "^1.0.0"
+    "@azure/core-auth" "^1.3.0"
+    "@azure/core-client" "^1.5.0"
+    "@azure/core-lro" "^2.2.0"
+    "@azure/core-paging" "^1.2.0"
+    "@azure/core-rest-pipeline" "^1.8.0"
+    tslib "^2.2.0"
+
 "@azure/core-auth@^1.3.0":
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@azure/core-auth/-/core-auth-1.3.2.tgz#6a2c248576c26df365f6c7881ca04b7f6d08e3d0"

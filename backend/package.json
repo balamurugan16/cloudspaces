@@ -23,6 +23,7 @@
   "dependencies": {
     "@azure/arm-appservice": "^13.0.0",
     "@azure/arm-resources": "^5.0.1",
+    "@azure/arm-storage": "^17.2.1",
     "@azure/identity": "^2.1.0",
     "@nestjs/common": "^8.0.0",
     "@nestjs/config": "^2.2.0",
