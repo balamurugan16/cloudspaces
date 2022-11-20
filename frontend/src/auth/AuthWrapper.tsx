@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, Component } from 'react';
 import { Button } from 'react-daisyui';
 import OauthPopup from 'react-oauth-popup';
 import { Provider } from '../models/types';
@@ -8,7 +8,7 @@ interface IProps {
   url: string;
   label: string;
   provider: Provider;
-  icon: string;
+  icon: any;
 }
 
 const AuthWrapper: FC<IProps> = ({ url, label, provider, icon }) => {
