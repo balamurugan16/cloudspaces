@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { Octokit } from 'octokit';
 
 @Injectable()
@@ -9,15 +9,14 @@ export class GithubGateway {
     });
   }
 
-  async authenticateUser(token: string) {
+  async getAuthenticatedUser(token: string) {
     let octo: Octokit;
     try {
       octo = this.createOctoInstance(token);
     } catch (e) {
-      console.log(e);
-      return;
+      throw new UnauthorizedException('Token expired');
     }
     const response = await octo.rest.users.getAuthenticated();
-    console.log(response);
+    return response.data;
   }
 }
