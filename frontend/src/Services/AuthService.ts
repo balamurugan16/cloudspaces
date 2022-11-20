@@ -1,3 +1,4 @@
+import { Provider } from '../models/types';
 import { RequestHandler } from "../auth/RequestHandler";
 
 class AuthService extends RequestHandler {
@@ -5,9 +6,10 @@ class AuthService extends RequestHandler {
     super();
   }
 
-  authenticateWithGithub(code: string) {
-    return this.http().post('/auth/github', { code });
+  authenticate(code: string, provider: Provider) {
+    return this.http().post(`user/authenticate?provider=${provider}`, { code });
   }
+
 }
 
 export default new AuthService();

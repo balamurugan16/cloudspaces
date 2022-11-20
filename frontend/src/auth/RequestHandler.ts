@@ -5,7 +5,7 @@ export class RequestHandler {
 
   constructor() {
     this.instance = axios.create({
-      baseURL: import.meta.env.SERVICE_URL,
+      baseURL: import.meta.env.VITE_BACKEND_URL,
       headers: {
         'Content-Type': 'application/json'
       }

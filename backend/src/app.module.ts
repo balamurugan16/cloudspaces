@@ -1,17 +1,19 @@
+import { HttpModule } from '@nestjs/axios';
+import { AuthService } from './services/auth.service';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { UserModule } from './user/user.module';
+import { UserController } from './controllers/user.controller';
+import { UserService } from './services/user.service';
+import { GithubGateway } from './gateways/github.gateway';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
     }),
-    // MongooseModule.forRoot(process.env.MONGODB_URI, {
-    //   autoCreate: true,
-    // }),
-    UserModule,
+    HttpModule,
   ],
-  providers: [],
+  controllers: [UserController],
+  providers: [UserService, AuthService, GithubGateway],
 })
 export class AppModule {}

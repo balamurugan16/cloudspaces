@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "command": "yarn start:dev",
+      "name": "Start backend",
+      "request": "launch",
+      "type": "node-terminal"
+    }
+  ]
+}
